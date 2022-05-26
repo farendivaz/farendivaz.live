@@ -48,26 +48,26 @@ const Nav = styled.ul`
   gap: 1.5rem;
   font-weight: 500;
   font-size: ${(props) => (props.icons ? "1.3rem" : "1.1rem")};
-  li:hover {
-    text-decoration: underline;
-    color: #5f5858;
-  }
 `;
 const Brand = styled.section`
   font-family: "Grape Nuts", cursive;
-  h4:hover {
-    color: #5f5858;
-  }
 `;
 
 const List = styled.li`
   list-style: none;
   cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+    color: #5f5858;
+  }
 `;
 
 const Name = styled.h4`
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
+  &:hover {
+    color: #5f5858;
+  }
 `;
 export default Navbar;

@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../images/programming.svg";
+import Logo from "../images/svg/programming.svg";
 import styled from "styled-components";
 
 const Hero = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
 const HeroWrapper = styled.section`
   width: 80%;
   max-width: 1000px;
-  margin: 7rem auto;
+  margin: 9.5rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
