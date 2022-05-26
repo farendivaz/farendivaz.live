@@ -1,4 +1,4 @@
-import Logo from "../test.png";
+import Logo from "../images/elly.png";
 
 export const projects = [
   {
@@ -6,6 +6,7 @@ export const projects = [
     title: "Movie App",
     imageSrc: Logo,
     imageAlt: "Movie app that contains all movie from rating etc..",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est provident ratione incidunt explicabo quo obcaecati consequuntur totam iste quidem ea omnis, voluptatem similique, eveniet voluptas necessitatibus minus tempore illum beatae.",
     demo: "https://google.com",
     github: "https://github.com",
   },
@@ -14,6 +15,7 @@ export const projects = [
     title: "Movie App",
     imageSrc: Logo,
     imageAlt: "Movie app that contains all movie from rating etc..",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est provident ratione incidunt explicabo quo obcaecati consequuntur totam iste quidem ea omnis, voluptatem similique, eveniet voluptas necessitatibus minus tempore illum beatae.",
     demo: "https://google.com",
     github: "https://github.com",
   },
@@ -22,6 +24,7 @@ export const projects = [
     title: "Movie App",
     imageSrc: Logo,
     imageAlt: "Movie app that contains all movie from rating etc..",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est provident ratione incidunt explicabo quo obcaecati consequuntur totam iste quidem ea omnis, voluptatem similique, eveniet voluptas necessitatibus minus tempore illum beatae.",
     demo: "https://google.com",
     github: "https://github.com",
   },
@@ -30,6 +33,7 @@ export const projects = [
     title: "Movie App",
     imageSrc: Logo,
     imageAlt: "Movie app that contains all movie from rating etc..",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est provident ratione incidunt explicabo quo obcaecati consequuntur totam iste quidem ea omnis, voluptatem similique, eveniet voluptas necessitatibus minus tempore illum beatae.",
     demo: "https://google.com",
     github: "https://github.com",
   },
