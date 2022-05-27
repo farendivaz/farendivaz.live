@@ -1,29 +1,49 @@
 import React from "react";
 import styled from "styled-components";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
       <Wrapper>
         <Brand>
-          <Name>Farendivaz</Name>
+          <Name>
+            <Link to="/">Farendivaz</Link>
+          </Name>
         </Brand>
         <Nav>
-          <List>Home</List>
-          <List>About</List>
-          <List>Projects</List>
-          <List>Contact</List>
+          <List>
+            <Link to="/">Home</Link>
+          </List>
+          <List>
+            <Link to="/about">About</Link>
+          </List>
+          <List>
+            <Link to="/projects">Projects</Link>
+          </List>
+          <List>
+            <Link to="/contact">Contact</Link>
+          </List>
         </Nav>
         <Nav icons>
           <List>
-            <FaGithub />
+            <LinkIcon href="https://github.com/farendivaz" target="_blank">
+              <FaGithub />
+            </LinkIcon>
           </List>
           <List>
-            <FaLinkedin />
+            <LinkIcon
+              href="https://linkedin.com/in/farizdandylazuardi/"
+              target="_blank"
+            >
+              <FaLinkedin />
+            </LinkIcon>
           </List>
           <List>
-            <FaTwitter />
+            <LinkIcon href="https://twitter.com/farendivaz" target="_blank">
+              <FaTwitter />
+            </LinkIcon>
           </List>
         </Nav>
       </Wrapper>
@@ -39,6 +59,10 @@ const Wrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   margin: 1.5rem auto 0 auto;
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 `;
 const Nav = styled.ul`
   display: flex;
@@ -62,6 +86,9 @@ const List = styled.li`
   }
 `;
 
+const LinkIcon = styled.a`
+  margin: auto;
+`;
 const Name = styled.h4`
   font-size: 1.5rem;
   font-weight: bold;

@@ -36,7 +36,7 @@ const HeroText = styled.section`
 `;
 const HeroHeading = styled.span`
   font-size: ${(props) => (props.small ? "1rem" : "5rem")};
-  font-weight: 600;
+  font-weight: bold;
   margin: -1rem 0;
 `;
 
