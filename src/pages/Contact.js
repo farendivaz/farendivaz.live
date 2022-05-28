@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <div>
       <h1>HELLO FROM VERCEL</h1>
-      <h4>THIS IS CONTACT FORM</h4>
+      <h4>TESTING</h4>
     </div>
   );
 };
