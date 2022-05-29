@@ -1,19 +1,53 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Email from "../images/svg/email.svg";
+import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 const Contact = () => {
+  const [result, setResult] = useState(false);
+  const form = useRef();
+  const success = () =>
+    toast.success("Your message has been sent successsfully sent", {
+      style: {
+        fontSize: "14px",
+      },
+    });
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_3t3ri6e",
+        "template_zj048oh",
+        form.current,
+        "Uk2o70IEIMB0mUP6g"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+    setResult(true);
+  };
+
   return (
     <Wrapper>
       <img src={Email} alt="Email Icon" />
       <ContactWrapper>
         <h4>Contact Me</h4>
         <p>Leave a message</p>
-        <form>
+        <form ref={form} onSubmit={sendEmail}>
           <input type="text" name="name" placeholder="Name" />
           <input type="text" name="email" placeholder="Email" />
           <textarea name="message" rows="8" placeholder="Message" />
-          <button>Send</button>
+          <button onClick={success}>Send</button>
+          {result ? <Toaster position="top-center" /> : ""}
         </form>
       </ContactWrapper>
     </Wrapper>
