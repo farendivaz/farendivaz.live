@@ -45,7 +45,7 @@ const AboutWrapper = styled.section`
   align-items: center;
   width: 80%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: -8rem auto;
   img {
     width: 300px;
     height: 400px;
@@ -56,21 +56,17 @@ const AboutWrapper = styled.section`
   }
   @media screen and (max-width: 1250px) {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    margin: -3rem auto 5rem auto;
     .first-image {
       display: none;
     }
     div {
       align-self: center;
       height: 200px;
-      margin: 0;
-    }
-    @media screen and (max-width: 860px) {
-      div {
-        display: none;
-      }
+      margin: 5rem auto;
     }
   }
 `;
@@ -85,7 +81,7 @@ const AboutDescription = styled.section`
     width: 50%;
     margin: 0 auto;
   }
-  @media screen and (max-width: 860px) {
+  @media screen and (max-width: 560px) {
     width: 80%;
     margin: 0 auto;
   }

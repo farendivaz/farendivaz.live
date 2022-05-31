@@ -86,7 +86,7 @@ export const Nav = styled.ul`
   gap: 1.5rem;
   font-weight: 500;
   font-size: ${(props) => (props.icons ? "1.3rem" : "1.1rem")};
-
+  margin: 0 auto;
   @media screen and (max-width: 960px) {
     display: none;
   }
