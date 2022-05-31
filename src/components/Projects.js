@@ -42,11 +42,12 @@ const ProjectsWrapper = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
   }
 `;
 const ProjectItem = styled.section`
   width: 40%;
-  margin: 1rem;
+  margin: 1rem auto;
   border-radius: 20px;
   transition: 500ms;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;

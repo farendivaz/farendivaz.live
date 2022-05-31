@@ -74,6 +74,9 @@ const Wrapper = styled.nav`
     text-decoration: none;
     color: #000;
   }
+  @media screen and (max-width: 960px) {
+    margin: 0 auto;
+  }
 `;
 export const Nav = styled.ul`
   display: flex;

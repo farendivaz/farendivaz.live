@@ -72,11 +72,20 @@ const Wrapper = styled.main`
     font-size: 0.8rem;
     margin: 0 0 1rem 0;
   }
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 300px;
+    }
+  }
 `;
 
 const ContactWrapper = styled.section`
   width: 500px;
   background-color: #fff;
+  margin: 0;
   form {
     display: flex;
     flex-direction: column;
@@ -100,6 +109,20 @@ const ContactWrapper = styled.section`
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+  }
+  @media screen and (max-width: 960px) {
+    input,
+    textarea {
+      width: 60%;
+      margin: auto;
+    }
+    button {
+      align-self: center;
+    }
+    h4,
+    p {
+      text-align: center;
+    }
   }
 `;
 export default Contact;
