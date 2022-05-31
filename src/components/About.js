@@ -8,7 +8,12 @@ const About = () => {
     <>
       <AboutHeading>About</AboutHeading>
       <AboutWrapper>
-        <img small src={Code} alt="Sitting beside Laptop" />
+        <img
+          small
+          src={Code}
+          alt="Sitting beside Laptop"
+          className="first-image"
+        />
         <AboutDescription>
           <p>
             I'm a junior developer who has recently started my journey as a web
@@ -49,6 +54,25 @@ const AboutWrapper = styled.section`
   div {
     align-self: flex-end;
   }
+  @media screen and (max-width: 1250px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .first-image {
+      display: none;
+    }
+    div {
+      align-self: center;
+      height: 200px;
+      margin: 0;
+    }
+    @media screen and (max-width: 860px) {
+      div {
+        display: none;
+      }
+    }
+  }
 `;
 
 const AboutDescription = styled.section`
@@ -57,5 +81,13 @@ const AboutDescription = styled.section`
   justify-content: center;
   align-items: center;
   padding: 3rem;
+  @media screen and (max-width: 1250px) {
+    width: 50%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 860px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 `;
 export default About;

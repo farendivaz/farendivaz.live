@@ -32,16 +32,16 @@ const Projects = () => {
 const ProjectsWrapper = styled.main`
   width: 80%;
   max-width: 1000px;
-  height: 1100px;
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  img {
-    width: 400px;
-    height: 250px;
-    border-radius: 20px 20px 0 0;
+  @media screen and (max-width: 1250px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 const ProjectItem = styled.section`
@@ -50,6 +50,12 @@ const ProjectItem = styled.section`
   border-radius: 20px;
   transition: 500ms;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  img {
+    max-width: 100%;
+    min-width: auto;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+  }
   h4 {
     font-size: 1.2rem;
     margin: 0;
@@ -64,6 +70,16 @@ const ProjectItem = styled.section`
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  @media screen and (max-width: 1250px) {
+    min-width: 400px;
+  }
+  @media screen and (max-width: 530px) {
+    min-width: 100%;
+    min-height: 450px;
+    img {
+      width: 100%;
+    }
   }
 `;
 

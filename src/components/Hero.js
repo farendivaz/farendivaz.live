@@ -49,6 +49,11 @@ const HeroWrapper = styled.section`
       width: 400px;
     }
   }
+  @media screen and (max-width: 450px) {
+    img {
+      width: 300px;
+    }
+  }
 `;
 
 const HeroText = styled.section`

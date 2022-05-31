@@ -1,9 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
+// import Sidebar from "./Sidebar";
+// useState
 
 const Navbar = () => {
+  // const [toggle, setToggle] = useState(false);
+  // const toggleButton = () => {
+  //   setToggle((prevState) => !prevState);
+  // };
   return (
     <>
       <Wrapper>
@@ -46,7 +52,12 @@ const Navbar = () => {
             </LinkIcon>
           </List>
         </Nav>
+        <MobileIcon>
+          <FaBars />
+          {/* {toggle && <Sidebar />} */}
+        </MobileIcon>
       </Wrapper>
+      {/* <Sidebar /> */}
     </>
   );
 };
@@ -64,7 +75,7 @@ const Wrapper = styled.nav`
     color: #000;
   }
 `;
-const Nav = styled.ul`
+export const Nav = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,21 +83,26 @@ const Nav = styled.ul`
   gap: 1.5rem;
   font-weight: 500;
   font-size: ${(props) => (props.icons ? "1.3rem" : "1.1rem")};
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
 `;
 const Brand = styled.section`
   font-family: "Grape Nuts", cursive;
 `;
 
-const List = styled.li`
+export const List = styled.li`
   list-style: none;
   cursor: pointer;
+  color: ${(props) => (props.white ? "white" : "black")};
   &:hover {
     text-decoration: underline;
     color: #5f5858;
   }
 `;
 
-const LinkIcon = styled.a`
+export const LinkIcon = styled.a`
   margin: auto;
 `;
 const Name = styled.h4`
@@ -95,6 +111,18 @@ const Name = styled.h4`
   cursor: pointer;
   &:hover {
     color: #5f5858;
+  }
+`;
+
+const MobileIcon = styled.button`
+  display: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  @media screen and (max-width: 960px) {
+    display: block;
+    cursor: pointer;
   }
 `;
 export default Navbar;
