@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Footer = () => {
   return (
-    <>
+    <FooterContainer>
       <FooterWrapper>
         <Link href="https://github.com/farendivaz" target="_blank">
           Github
@@ -24,12 +24,24 @@ const Footer = () => {
           <Name>Farendivaz</Name>
         </small>
       </Copyright>
-    </>
+    </FooterContainer>
   );
 };
 
-const FooterWrapper = styled.footer`
-  margin: 7rem auto 0 auto;
+const FooterContainer = styled.footer`
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin: 3rem auto 0.2rem auto;
+  @media screen and (max-width: 960px) {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+`;
+const FooterWrapper = styled.nav`
+  margin: 10rem auto 0 auto;
   text-align: center;
 `;
 const Link = styled.a`
@@ -44,12 +56,12 @@ const Link = styled.a`
 
 const Name = styled.span`
   font-family: "Grape Nuts", cursive;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: bold;
 `;
 
 const Copyright = styled.section`
   text-align: center;
-  margin: 0.5rem auto 1rem auto;
+  margin: 0 auto;
 `;
 export default Footer;

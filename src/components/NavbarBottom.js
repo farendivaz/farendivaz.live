@@ -52,7 +52,7 @@ const NavBottom = styled.nav`
   gap: 1.5rem;
   font-weight: 500;
   font-size: ${(props) => (props.icons ? "1.3rem" : "1.1rem")};
-  margin: 5rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   position: sticky;
   bottom: 0;
   a {

@@ -83,7 +83,7 @@ const Wrapper = styled.main`
 `;
 
 const ContactWrapper = styled.section`
-  width: 500px;
+  width: 40%;
   background-color: #fff;
   margin: 0;
   form {
@@ -111,12 +111,15 @@ const ContactWrapper = styled.section`
     cursor: pointer;
   }
   @media screen and (max-width: 960px) {
+    width: 80%;
+    margin: 4rem auto 0 auto;
     input,
     textarea {
-      width: 60%;
+      width: 80%;
       margin: auto;
     }
     button {
+      width: 30%;
       align-self: center;
     }
     h4,
