@@ -6,6 +6,7 @@ import Contact from "./pages/ContactPage";
 import ErrorPage from "./pages/ErrorPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import NavbarBottom from "./components/NavbarBottom";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <Footer />
+      <NavbarBottom />
     </Router>
   );
 }

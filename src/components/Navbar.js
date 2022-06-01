@@ -1,17 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { FaLinkedin, FaGithub, FaTwitter, FaBars } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
-// import Sidebar from "./Sidebar";
-// useState
 
 const Navbar = () => {
-  // const [toggle, setToggle] = useState(false);
-  // const toggleButton = () => {
-  //   setToggle((prevState) => !prevState);
-  // };
   return (
-    <>
+    <Example>
       <Wrapper>
         <Brand>
           <Name>
@@ -52,50 +46,71 @@ const Navbar = () => {
             </LinkIcon>
           </List>
         </Nav>
-        <MobileIcon>
-          <FaBars />
-          {/* {toggle && <Sidebar />} */}
-        </MobileIcon>
       </Wrapper>
-      {/* <Sidebar /> */}
-    </>
+    </Example>
   );
 };
 
+const Example = styled.header`
+  background-color: #fff;
+  width: 100%;
+  border-bottom: 2px solid #f5f5f5;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+`;
 const Wrapper = styled.nav`
-  width: 80%;
-  max-width: 1000px;
+  width: 60%;
+  background-color: #fff;
   font-size: 1.1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8rem;
   margin: 1.5rem auto 0 auto;
+
   a {
     text-decoration: none;
     color: #000;
   }
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 1400px) {
+    gap: 1rem;
     margin: 0 auto;
   }
+  @media screen and (max-width: 1080px) {
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 960px) {
+    margin: 0 auto;
+    width: 90%;
+  }
 `;
-export const Nav = styled.ul`
+const Nav = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
   gap: 1.5rem;
   font-weight: 500;
+  text-align: center;
   font-size: ${(props) => (props.icons ? "1.3rem" : "1.1rem")};
   margin: 0 auto;
+  a {
+    text-decoration: none;
+    color: #000;
+  }
   @media screen and (max-width: 960px) {
     display: none;
   }
 `;
 const Brand = styled.section`
   font-family: "Grape Nuts", cursive;
+  @media screen and (max-width: 960px) {
+    align-self: flex-start;
+  }
 `;
 
-export const List = styled.li`
+const List = styled.li`
   list-style: none;
   cursor: pointer;
   color: ${(props) => (props.white ? "white" : "black")};
@@ -105,7 +120,7 @@ export const List = styled.li`
   }
 `;
 
-export const LinkIcon = styled.a`
+const LinkIcon = styled.a`
   margin: auto;
 `;
 const Name = styled.h4`
@@ -115,17 +130,9 @@ const Name = styled.h4`
   &:hover {
     color: #5f5858;
   }
-`;
-
-const MobileIcon = styled.button`
-  display: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  @media screen and (max-width: 960px) {
-    display: block;
-    cursor: pointer;
+  a {
+    color: #000;
   }
 `;
+
 export default Navbar;
