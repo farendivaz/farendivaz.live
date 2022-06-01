@@ -111,7 +111,7 @@ const ContactWrapper = styled.section`
     cursor: pointer;
   }
   @media screen and (max-width: 960px) {
-    width: 80%;
+    width: 100%;
     margin: 4rem auto 0 auto;
     input,
     textarea {
