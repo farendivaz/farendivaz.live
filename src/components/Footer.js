@@ -21,7 +21,7 @@ const Footer = () => {
       <Copyright>
         <small>
           &copy;{new Date().getFullYear()} All Rights Reserved, Made by
-          <Name>Farendivaz</Name>
+          <Name> Farendivaz</Name>
         </small>
       </Copyright>
     </FooterContainer>
