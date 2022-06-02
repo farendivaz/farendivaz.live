@@ -38,7 +38,7 @@ const ErrorWrapper = styled.main`
     height: 440px;
     margin: 5rem auto 30rem auto;
     img {
-      width: 500px;
+      width: 450px;
     }
     h1 {
       margin: 0;
@@ -47,7 +47,7 @@ const ErrorWrapper = styled.main`
   @media screen and (max-width: 670px) {
     margin: 1rem auto 10rem auto;
     img {
-      width: 400px;
+      width: 300px;
     }
     h1 {
       margin: 0;

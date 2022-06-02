@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <Example>
+    <Header>
       <Wrapper>
         <Brand>
           <Name>
@@ -47,20 +47,21 @@ const Navbar = () => {
           </List>
         </Nav>
       </Wrapper>
-    </Example>
+    </Header>
   );
 };
 
-const Example = styled.header`
+const Header = styled.header`
   background-color: #fff;
   width: 100%;
+  margin: 0 auto;
   border-bottom: 2px solid #f5f5f5;
   position: sticky;
   top: 0;
   z-index: 1;
 `;
 const Wrapper = styled.nav`
-  width: 60%;
+  width: 65%;
   background-color: #fff;
   font-size: 1.1rem;
   display: flex;
@@ -73,9 +74,10 @@ const Wrapper = styled.nav`
     text-decoration: none;
     color: #000;
   }
-  @media screen and (max-width: 1400px) {
-    gap: 1rem;
+  @media screen and (max-width: 1510px) {
+    gap: 3rem;
     margin: 0 auto;
+    width: 70%;
   }
   @media screen and (max-width: 1080px) {
     margin: 0 auto;
@@ -94,7 +96,7 @@ const Nav = styled.ul`
   font-weight: 500;
   text-align: center;
   font-size: ${(props) => (props.icons ? "1.3rem" : "1.1rem")};
-  margin: 0 auto;
+  margin: 0 2.2rem;
   a {
     text-decoration: none;
     color: #000;
@@ -127,6 +129,7 @@ const Name = styled.h4`
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
+  margin-left: 1.5rem;
   &:hover {
     color: #5f5858;
   }

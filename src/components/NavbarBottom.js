@@ -39,7 +39,7 @@ const NavbarBottom = () => {
 };
 
 const NavBottom = styled.nav`
-  height: 70px;
+  height: 60px;
   max-width: 750px;
   background-color: #fff;
   border-top: 2px solid #f5f5f5;
