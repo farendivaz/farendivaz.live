@@ -1,11 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { CgSun } from "react-icons/cg";
+import { HiMoon } from "react-icons/hi";
+import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 
-const Navbar = () => {
+const Navbar = ({ props }) => {
+  const changeTheme = () => {
+    if (props.theme === "light") {
+      props.setTheme("dark");
+    } else {
+      props.setTheme("light");
+    }
+  };
+
+  const icon = props.theme === "light" ? <HiMoon /> : <CgSun />;
+
   return (
-    <Example>
+    <Header>
       <Wrapper>
         <Brand>
           <Name>
@@ -46,13 +58,14 @@ const Navbar = () => {
             </LinkIcon>
           </List>
         </Nav>
+        <Toggle onClick={changeTheme}>{icon}</Toggle>
       </Wrapper>
-    </Example>
+    </Header>
   );
 };
 
-const Example = styled.header`
-  background-color: #fff;
+const Header = styled.header`
+  background-color: ${(props) => props.theme.pageBackground};
   width: 100%;
   border-bottom: 2px solid #f5f5f5;
   position: sticky;
@@ -135,4 +148,11 @@ const Name = styled.h4`
   }
 `;
 
+const Toggle = styled.button`
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: ${(props) => props.theme.fontColor};
+`;
 export default Navbar;
