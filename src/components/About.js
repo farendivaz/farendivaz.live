@@ -16,13 +16,12 @@ const About = () => {
         />
         <AboutDescription>
           <p>
-            I'm a junior developer who has recently started my journey as a web
-            developer.
+            I'm an informatics student who is passionate about web development.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa
-            temporibus in alias ab vitae. Itaque veritatis sequi esse a soluta
-            commodi fugit illo, eaque nostrum veniam saepe, voluptatem est vero.
+            I'm currently learning web development with a focus on the MERN
+            stack, but still exploring other technologies and frameworks that
+            catch my interest!
           </p>
         </AboutDescription>
         <div>
