@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
@@ -10,28 +10,28 @@ const NavbarBottom = () => {
     <>
       <NavBottom>
         <ListNavBottom>
-          <Link to="/">
+          <NavLink to="/">
             <AiOutlineHome />
             Home
-          </Link>
+          </NavLink>
         </ListNavBottom>
         <ListNavBottom>
-          <Link to="/about">
+          <NavLink to="/about">
             <HiOutlineInformationCircle />
             About
-          </Link>
+          </NavLink>
         </ListNavBottom>
         <ListNavBottom>
-          <Link to="/projects">
+          <NavLink to="/projects">
             <AiOutlineProject />
             Projects
-          </Link>
+          </NavLink>
         </ListNavBottom>
         <ListNavBottom>
-          <Link to="/contact">
+          <NavLink to="/contact">
             <BsPerson />
             Contact
-          </Link>
+          </NavLink>
         </ListNavBottom>
       </NavBottom>
     </>
@@ -41,8 +41,10 @@ const NavbarBottom = () => {
 const NavBottom = styled.nav`
   height: 60px;
   max-width: 750px;
-  background-color: #fff;
-  border-top: 2px solid #f5f5f5;
+  /* background-color: #fff; */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  /* border-top: 2px solid #f5f5f5; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -60,7 +62,7 @@ const NavBottom = styled.nav`
     color: #000;
   }
   a:hover {
-    text-decoration: underline;
+    color: #6c63ff;
   }
   @media screen and (max-width: 960px) {
     display: flex;
@@ -77,6 +79,10 @@ const ListNavBottom = styled.li`
     justify-content: center;
     align-items: center;
     font-size: 1rem;
+  }
+  .active {
+    color: #6c63ff;
+    font-weight: bold;
   }
 `;
 export default NavbarBottom;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -9,21 +9,21 @@ const Navbar = () => {
       <Wrapper>
         <Brand>
           <Name>
-            <Link to="/">Farendivaz</Link>
+            <NavLink to="/">Farendivaz</NavLink>
           </Name>
         </Brand>
         <Nav>
           <List>
-            <Link to="/">Home</Link>
+            <NavLink to="/">Home</NavLink>
           </List>
           <List>
-            <Link to="/about">About</Link>
+            <NavLink to="/about">About</NavLink>
           </List>
           <List>
-            <Link to="/projects">Projects</Link>
+            <NavLink to="/projects">Projects</NavLink>
           </List>
           <List>
-            <Link to="/contact">Contact</Link>
+            <NavLink to="/contact">Contact</NavLink>
           </List>
         </Nav>
         <Nav icons>
@@ -52,23 +52,22 @@ const Navbar = () => {
 };
 
 const Header = styled.header`
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
   width: 100%;
   margin: 0 auto;
-  border-bottom: 2px solid #f5f5f5;
+  backdrop-filter: blur(15px);
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 10;
 `;
 const Wrapper = styled.nav`
   width: 65%;
-  background-color: #fff;
   font-size: 1.1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 8rem;
-  margin: 1.5rem auto 0 auto;
+  margin: 1rem auto 0 auto;
 
   a {
     text-decoration: none;
@@ -101,6 +100,14 @@ const Nav = styled.ul`
     text-decoration: none;
     color: #000;
   }
+  a:hover {
+    color: #6c63ff;
+  }
+  .active {
+    color: #6c63ff;
+    font-weight: bold;
+    border-bottom: 3px solid #6c63ff;
+  }
   @media screen and (max-width: 960px) {
     display: none;
   }
@@ -116,10 +123,6 @@ const List = styled.li`
   list-style: none;
   cursor: pointer;
   color: ${(props) => (props.white ? "white" : "black")};
-  &:hover {
-    text-decoration: underline;
-    color: #5f5858;
-  }
 `;
 
 const LinkIcon = styled.a`
