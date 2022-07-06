@@ -34,14 +34,20 @@ const Navbar = () => {
           </List>
           <List>
             <LinkIcon
+              blue
               href="https://linkedin.com/in/farizdandylazuardi/"
               target="_blank"
+              className="linkedin"
             >
               <FaLinkedin />
             </LinkIcon>
           </List>
           <List>
-            <LinkIcon href="https://twitter.com/farendivaz" target="_blank">
+            <LinkIcon
+              blue
+              href="https://twitter.com/farendivaz"
+              target="_blank"
+            >
               <FaTwitter />
             </LinkIcon>
           </List>
@@ -127,6 +133,11 @@ const List = styled.li`
 
 const LinkIcon = styled.a`
   margin: auto;
+  &:hover {
+    color: ${(props) =>
+      props.blue ? "#0a66c2 !important" : "#555 !important"};
+    /* color: #0a66c2 !important; */
+  }
 `;
 const Name = styled.h4`
   font-size: 1.5rem;
