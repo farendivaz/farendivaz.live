@@ -136,7 +136,6 @@ const LinkIcon = styled.a`
   &:hover {
     color: ${(props) =>
       props.blue ? "#0a66c2 !important" : "#555 !important"};
-    /* color: #0a66c2 !important; */
   }
 `;
 const Name = styled.h4`
