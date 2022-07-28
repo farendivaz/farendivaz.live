@@ -9,7 +9,7 @@ const Projects = () => {
       <ProjectsWrapper>
         {projects.map((project) => {
           return (
-            <ProjectItem className="something">
+            <ProjectItem>
               <img src={project.imageSrc} alt={project.title} />
               <h4>{project.title}</h4>
               <p>{project.desc}</p>
@@ -74,6 +74,7 @@ const ProjectItem = styled.section`
   }
   @media screen and (max-width: 1250px) {
     min-width: 400px;
+    height: 516px;
   }
   @media screen and (max-width: 530px) {
     min-width: 100%;
@@ -98,6 +99,9 @@ const Button = styled.button`
   font-weight: bold;
   border-radius: 15px;
   text-decoration: none;
+  &:hover {
+    background-color: #313030;
+  }
 `;
 
 const ButtonWrapper = styled.section`

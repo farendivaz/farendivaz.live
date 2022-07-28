@@ -109,6 +109,9 @@ const ContactWrapper = styled.section`
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    &:hover {
+      background-color: #4c43f9;
+    }
   }
   @media screen and (max-width: 960px) {
     width: 100%;
