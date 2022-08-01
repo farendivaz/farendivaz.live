@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Code from "../images/svg/code.svg";
-import Static from "../images/svg/static_website.svg";
+import Code from "../assets/svg/code.svg";
+import Static from "../assets/svg/static_website.svg";
 
 const About = () => {
   return (

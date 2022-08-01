@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import Email from "../images/svg/email.svg";
+import Email from "../assets/svg/email.svg";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 

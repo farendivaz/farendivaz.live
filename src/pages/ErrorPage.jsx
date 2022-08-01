@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import ErrorIcon from "../images/svg/error_icon.svg";
+import ErrorIcon from "../assets/svg/error_icon.svg";
 
 const ErrorPage = () => {
   return (

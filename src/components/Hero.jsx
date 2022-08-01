@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../images/svg/programming.svg";
+import Logo from "../assets/svg/programming.svg";
 import styled from "styled-components";
 
 const Hero = () => {

@@ -14,10 +14,10 @@ const Projects = () => {
               <h4>{project.title}</h4>
               <p>{project.desc}</p>
               <ButtonWrapper>
-                <Button as="a" href={project.demo}>
+                <Button as="a" href={project.demo} target="_blank">
                   Live Demo
                 </Button>
-                <Button as="a" href={project.github}>
+                <Button as="a" href={project.github} target="_blank">
                   Github
                 </Button>
               </ButtonWrapper>
@@ -47,6 +47,7 @@ const ProjectsWrapper = styled.main`
 `;
 const ProjectItem = styled.section`
   width: 40%;
+  height: 516px;
   margin: 1rem auto;
   border-radius: 20px;
   transition: 500ms;
@@ -65,6 +66,7 @@ const ProjectItem = styled.section`
   p {
     padding: 0 1rem;
     margin: 1rem 0 0 0;
+    text-align: left;
   }
   &:hover {
     transform: scale(1.0125);
@@ -74,7 +76,6 @@ const ProjectItem = styled.section`
   }
   @media screen and (max-width: 1250px) {
     min-width: 400px;
-    height: 516px;
   }
   @media screen and (max-width: 530px) {
     min-width: 100%;
@@ -106,6 +107,6 @@ const Button = styled.button`
 
 const ButtonWrapper = styled.section`
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin: 1.5rem auto 1.5rem auto;
 `;
 export default Projects;
