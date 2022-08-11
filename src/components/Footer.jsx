@@ -46,7 +46,8 @@ const FooterWrapper = styled.nav`
 `;
 const Link = styled.a`
   margin: 1rem;
-  color: black;
+  /* color: black; */
+  color: ${({ theme }) => theme.text};
   text-decoration: none;
   cursor: pointer;
   &:hover {

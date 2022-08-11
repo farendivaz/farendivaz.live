@@ -1,9 +1,9 @@
-import React from "react";
 import styled from "styled-components";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { BsMoonFill, BsSunFill } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ toggleTheme, dark }) => {
   return (
     <Header>
       <Wrapper>
@@ -28,8 +28,13 @@ const Navbar = () => {
         </Nav>
         <Nav icons>
           <List>
+            <Button onClick={toggleTheme}>
+              {dark ? <BsSunFill size="20px" /> : <BsMoonFill size="20px" />}
+            </Button>
+          </List>
+          <List>
             <LinkIcon href="https://github.com/farendivaz" target="_blank">
-              <FaGithub />
+              <FaGithub size="20px" />
             </LinkIcon>
           </List>
           <List>
@@ -39,7 +44,7 @@ const Navbar = () => {
               target="_blank"
               className="linkedin"
             >
-              <FaLinkedin />
+              <FaLinkedin size="20px" />
             </LinkIcon>
           </List>
           <List>
@@ -48,7 +53,7 @@ const Navbar = () => {
               href="https://twitter.com/farendivaz"
               target="_blank"
             >
-              <FaTwitter />
+              <FaTwitter size="20px" />
             </LinkIcon>
           </List>
         </Nav>
@@ -58,13 +63,16 @@ const Navbar = () => {
 };
 
 const Header = styled.header`
-  background-color: rgba(255, 255, 255, 0.3);
+  background: ${({ theme }) => theme.glass};
   width: 100%;
   margin: 0 auto;
   backdrop-filter: blur(15px);
   position: sticky;
   top: 0;
   z-index: 10;
+  @media screen and (max-width: 960px) {
+    height: 85px;
+  }
 `;
 const Wrapper = styled.nav`
   width: 65%;
@@ -72,8 +80,8 @@ const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 8rem;
-  margin: 1rem auto 0 auto;
+  gap: 7rem;
+  margin: 0 auto 0 auto;
 
   a {
     text-decoration: none;
@@ -89,7 +97,10 @@ const Wrapper = styled.nav`
   }
   @media screen and (max-width: 960px) {
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 `;
 const Nav = styled.ul`
@@ -97,14 +108,14 @@ const Nav = styled.ul`
   justify-content: center;
   align-items: center;
   list-style: none;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
+  gap: ${(props) => (props.icons ? "1rem" : "1.5rem")};
   font-weight: 500;
   text-align: center;
-  font-size: ${(props) => (props.icons ? "1.3rem" : "1.1rem")};
-  margin: 0 2.2rem;
   a {
     text-decoration: none;
-    color: #000;
+    /* color: #000; */
+    color: ${({ theme }) => theme.text};
   }
   a:hover {
     color: #6c63ff;
@@ -115,11 +126,14 @@ const Nav = styled.ul`
     border-bottom: 3px solid #6c63ff;
   }
   @media screen and (max-width: 960px) {
-    display: none;
+    li:not(button) {
+      display: none;
+    }
   }
 `;
 const Brand = styled.section`
-  font-family: "Grape Nuts", cursive;
+  /* font-family: "Grape Nuts", cursive; */
+  font-family: Poppins, Helvetica, Arial, Roboto, sans-serif;
   @media screen and (max-width: 960px) {
     align-self: flex-start;
   }
@@ -140,15 +154,26 @@ const LinkIcon = styled.a`
 `;
 const Name = styled.h4`
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   margin-left: 1.5rem;
   &:hover {
     color: #5f5858;
   }
   a {
-    color: #000;
+    /* color: #000; */
+    color: ${({ theme }) => theme.text};
   }
+`;
+
+const Button = styled.button`
+  background-color: transparent;
+  color: ${({ theme }) => theme.text};
+  border: 1px;
+  cursor: pointer;
+  /* @media screen and (max-width: 960px) {
+    margin-right: 1rem;
+  } */
 `;
 
 export default Navbar;

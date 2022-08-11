@@ -41,8 +41,8 @@ const NavbarBottom = () => {
 const NavBottom = styled.nav`
   height: 60px;
   max-width: 750px;
-  /* background-color: #fff; */
-  background-color: rgba(255, 255, 255, 0.3);
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  background: ${({ theme }) => theme.glass};
   backdrop-filter: blur(15px);
   /* border-top: 2px solid #f5f5f5; */
   display: flex;
@@ -59,7 +59,8 @@ const NavBottom = styled.nav`
   bottom: 0;
   a {
     text-decoration: none;
-    color: #000;
+    /* color: #000; */
+    color: ${({ theme }) => theme.text};
   }
   a:hover {
     color: #6c63ff;

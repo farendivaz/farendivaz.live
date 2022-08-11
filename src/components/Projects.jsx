@@ -96,12 +96,14 @@ const Button = styled.button`
   padding: 0.5em 1em;
   background-color: #000;
   color: #fff;
+  background: ${({ theme }) => theme.buttonProject};
+  color: ${({ theme }) => theme.textProject};
   margin: 0 1rem 0 0;
   font-weight: bold;
   border-radius: 15px;
   text-decoration: none;
   &:hover {
-    background-color: #313030;
+    opacity: 0.8;
   }
 `;
 
