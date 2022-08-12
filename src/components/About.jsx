@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Code from "../assets/svg/code.svg";
-import Static from "../assets/svg/static_website.svg";
+import coding from "../assets/svg/coding.svg";
 
 const About = () => {
   return (
@@ -25,7 +25,7 @@ const About = () => {
           </p>
         </AboutDescription>
         <div>
-          <img src={Static} alt="Standing infront HTML CSS background" />
+          <img src={coding} alt="Standing infront HTML CSS background" />
         </div>
       </AboutWrapper>
     </>

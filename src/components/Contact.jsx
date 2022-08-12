@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import Email from "../assets/svg/email.svg";
+import Mesengger from "../assets/svg/messenger.svg";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -38,7 +38,7 @@ const Contact = () => {
 
   return (
     <Wrapper>
-      <img src={Email} alt="Email Icon" />
+      <img src={Mesengger} alt="Email Icon" />
       <ContactWrapper>
         <h4>Contact Me</h4>
         <p>Leave a message</p>
@@ -95,14 +95,15 @@ const ContactWrapper = styled.section`
   input,
   textarea {
     /* background-color: #f5f5f5; */
-    background: ${({ theme }) => theme.formInput};
-    color: ${({ theme }) => theme.text};
+    /* background: ${({ theme }) => theme.formInput}; */
+    /* color: ${({ theme }) => theme.text}; */
     border: none;
     outline: none;
     padding: 1rem;
     border-radius: 5px;
     &::placeholder {
-      color: ${({ theme }) => theme.text};
+      /* color: ${({ theme }) => theme.text}; */
+      color: #232946;
     }
   }
   button {
