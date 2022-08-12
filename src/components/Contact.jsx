@@ -43,9 +43,9 @@ const Contact = () => {
         <h4>Contact Me</h4>
         <p>Leave a message</p>
         <form ref={form} onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Name" />
-          <input type="text" name="email" placeholder="Email" />
-          <textarea name="message" rows="8" placeholder="Message" />
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="text" name="email" placeholder="Email" required />
+          <textarea name="message" rows="8" placeholder="Message" required />
           <button onClick={success}>Send</button>
           {result ? <Toaster position="top-center" /> : ""}
         </form>
@@ -94,7 +94,7 @@ const ContactWrapper = styled.section`
   }
   input,
   textarea {
-    /* background-color: #f5f5f5; */
+    background-color: #f5f5f5;
     /* background: ${({ theme }) => theme.formInput}; */
     /* color: ${({ theme }) => theme.text}; */
     border: none;
