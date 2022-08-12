@@ -84,7 +84,8 @@ const Wrapper = styled.main`
 
 const ContactWrapper = styled.section`
   width: 40%;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background: ${({ theme }) => theme.body};
   margin: 0;
   form {
     display: flex;
@@ -93,11 +94,16 @@ const ContactWrapper = styled.section`
   }
   input,
   textarea {
-    background-color: #f5f5f5;
+    /* background-color: #f5f5f5; */
+    background: ${({ theme }) => theme.formInput};
+    color: ${({ theme }) => theme.text};
     border: none;
     outline: none;
     padding: 1rem;
     border-radius: 5px;
+    &::placeholder {
+      color: ${({ theme }) => theme.text};
+    }
   }
   button {
     width: 20%;

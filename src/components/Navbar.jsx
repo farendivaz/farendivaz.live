@@ -27,33 +27,26 @@ const Navbar = ({ toggleTheme, dark }) => {
           </List>
         </Nav>
         <Nav icons>
-          <List>
-            <Button onClick={toggleTheme}>
-              {dark ? <BsSunFill size="20px" /> : <BsMoonFill size="20px" />}
-            </Button>
-          </List>
+          <Button onClick={toggleTheme}>
+            {dark ? <BsSunFill size="20px" /> : <BsMoonFill size="20px" />}
+          </Button>
           <List>
             <LinkIcon href="https://github.com/farendivaz" target="_blank">
-              <FaGithub size="20px" />
+              <StyledFaGithub size="20px" />
             </LinkIcon>
           </List>
           <List>
             <LinkIcon
-              blue
               href="https://linkedin.com/in/farizdandylazuardi/"
               target="_blank"
               className="linkedin"
             >
-              <FaLinkedin size="20px" />
+              <StyledFaLinkedIn size="20px" />
             </LinkIcon>
           </List>
           <List>
-            <LinkIcon
-              blue
-              href="https://twitter.com/farendivaz"
-              target="_blank"
-            >
-              <FaTwitter size="20px" />
+            <LinkIcon href="https://twitter.com/farendivaz" target="_blank">
+              <StyledFaTwitter size="20px" />
             </LinkIcon>
           </List>
         </Nav>
@@ -147,10 +140,6 @@ const List = styled.li`
 
 const LinkIcon = styled.a`
   margin: auto;
-  &:hover {
-    color: ${(props) =>
-      props.blue ? "#0a66c2 !important" : "#555 !important"};
-  }
 `;
 const Name = styled.h4`
   font-size: 1.5rem;
@@ -171,9 +160,24 @@ const Button = styled.button`
   color: ${({ theme }) => theme.text};
   border: 1px;
   cursor: pointer;
-  /* @media screen and (max-width: 960px) {
-    margin-right: 1rem;
-  } */
 `;
 
+const StyledFaGithub = styled(FaGithub)`
+  &:hover {
+    transform: scale(1.2);
+    color: ${({ theme }) => theme.text};
+  }
+`;
+const StyledFaLinkedIn = styled(FaLinkedin)`
+  &:hover {
+    transform: scale(1.2);
+    color: ${({ theme }) => theme.text};
+  }
+`;
+const StyledFaTwitter = styled(FaTwitter)`
+  &:hover {
+    transform: scale(1.2);
+    color: ${({ theme }) => theme.text};
+  }
+`;
 export default Navbar;
