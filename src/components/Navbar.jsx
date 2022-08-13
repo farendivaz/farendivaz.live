@@ -126,12 +126,10 @@ const Nav = styled.ul`
 `;
 const Brand = styled.section`
   font-family: "Grape Nuts", cursive;
-  /* font-family: Poppins, Helvetica, Arial, Roboto, sans-serif; */
   @media screen and (max-width: 960px) {
     align-self: flex-start;
   }
   &:hover {
-    transform: scale(1.1);
     opacity: 0.8;
   }
 `;
