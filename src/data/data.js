@@ -8,7 +8,7 @@ export const projects = [
     title: "Personal Website",
     imageSrc: PersonalWebsiteImage,
     imageAlt: "Farendivaz Personal Website preview image",
-    desc: "This is my first Personal website, which contains my portfolio and contact. I built this website with React, React router, and the styling is done with styled-components. This website Deploy on Vercel. I would highly recommend Vercel, because is the easiest platform to deploy static website",
+    desc: "This is my first Personal website, which contains my portfolio and contact. I built this website with React, React router, and the styling is done with styled-components. This website is Deploy on Vercel. I would highly recommend Vercel because is the easiest platform to deploy a static website",
     demo: "https://www.farendivaz.live",
     github: "https://github.com/farendivaz/farendivaz.live",
   },
