@@ -9,7 +9,7 @@ const Projects = () => {
       <ProjectsWrapper>
         {projects.map((project) => {
           return (
-            <ProjectItem>
+            <ProjectItem key={project.id}>
               <img src={project.imageSrc} alt={project.title} />
               <h4>{project.title}</h4>
               <p>{project.desc}</p>
