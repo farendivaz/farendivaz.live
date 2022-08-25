@@ -36,7 +36,7 @@ export const projects = [
     title: "GraphCMS Blog",
     imageSrc: BlogImage,
     imageAlt: "GraphCMS blog preview image",
-    desc: "A fully dynamic blog with React and GraphCMS. GraphCMS is a powerful HeadlessCMS (Content Management System) that uses GraphQL technology for querying data and performing mutations (or updates) to the content. The content of this blog is still dummy text, but probably I'll change it later.",
+    desc: "A fully dynamic blog with React and GraphCMS that uses GraphQL technology for querying data and performing mutations (or updates) to the content. The content of this blog is still dummy text, but probably I'll change it later.",
     demo: "https://blog-graphcms-three.vercel.app/",
     github: "https://github.com/farendivaz/blog-graphcms",
   },
