@@ -1,6 +1,7 @@
 import PersonalWebsiteImage from "../assets/images/farendivaz.png";
 import GithubFinderImage from "../assets/images/github-finder.png";
 import MovieSearchImage from "../assets/images/movie-search.png";
+import BlogImage from "../assets/images/graphcms_blog.png";
 
 export const projects = [
   {
@@ -8,7 +9,7 @@ export const projects = [
     title: "Personal Website",
     imageSrc: PersonalWebsiteImage,
     imageAlt: "Farendivaz Personal Website preview image",
-    desc: "This is my first Personal website, which contains my portfolio and contact. I built this website with React, React router, and the styling is done with styled-components. This website is Deploy on Vercel. I would highly recommend Vercel because is the easiest platform to deploy a static website",
+    desc: "This is my first Personal website, which contains my portfolio and contact. I built this website with React, React router, and the styling is done with styled-components. This website is Deploy on Vercel. I would highly recommend Vercel because is the easiest platform to deploy a static website.",
     demo: "https://www.farendivaz.live",
     github: "https://github.com/farendivaz/farendivaz.live",
   },
@@ -26,17 +27,17 @@ export const projects = [
     title: "Movie Search",
     imageSrc: MovieSearchImage,
     imageAlt: "Movie search app preview image",
-    desc: "I built this project with React and CSS. This project connects with OMDB API to search for movies and detail about the movie. This project is one of my first projects, also I learned how to fetch a third-party API in ReactJS and display the data in the Frontend",
+    desc: "I built this project with React and CSS. This project connects with OMDB API to search for movies and detail about the movie. This project is one of my first projects, also I learned how to fetch a third-party API in ReactJS and display the data in the Frontend.",
     demo: "https://movie-site-one.vercel.app/",
     github: "https://github.com/farendivaz/movie-site-app",
   },
   {
     id: 4,
-    title: "Personal Website",
-    imageSrc: PersonalWebsiteImage,
-    imageAlt: "Personal Website that contains all movie from rating etc..",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est provident ratione incidunt explicabo quo obcaecati consequuntur totam iste quidem ea omnis, voluptatem similique, eveniet voluptas necessitatibus minus tempore illum beatae.",
-    demo: "https://google.com",
-    github: "https://github.com",
+    title: "GraphCMS Blog",
+    imageSrc: BlogImage,
+    imageAlt: "GraphCMS blog preview image",
+    desc: "A fully dynamic blog with React and GraphCMS. GraphCMS is a powerful HeadlessCMS (Content Management System) that uses GraphQL technology for querying data and performing mutations (or updates) to the content. The content of this blog is still dummy text, but probably I'll change it later.",
+    demo: "https://blog-graphcms-three.vercel.app/",
+    github: "https://github.com/farendivaz/blog-graphcms",
   },
 ];
