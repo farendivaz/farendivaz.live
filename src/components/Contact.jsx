@@ -48,7 +48,7 @@ const Contact = () => {
           <input type="text" name="email" placeholder="Email" required />
           <textarea name="message" rows="8" placeholder="Message" required />
           <button onClick={success}>Send</button>
-          {result ? <Toaster position="top-center" /> : ""}
+          {result ? <Toaster position="top-left" /> : ""}
         </form>
       </ContactWrapper>
     </Wrapper>
@@ -69,12 +69,12 @@ const Wrapper = styled.main`
   h4 {
     font-weight: 600;
     margin: 0;
-    animation: ${slideDown} 0.8s forwards;
+    animation: ${slideDown} 1s forwards;
   }
   p {
     font-size: 0.8rem;
     margin: 0 0 1rem 0;
-    animation: ${slideDown} 0.8s forwards;
+    animation: ${slideDown} 1s forwards;
   }
   @media screen and (max-width: 960px) {
     flex-direction: column;
@@ -88,26 +88,22 @@ const Wrapper = styled.main`
 
 const ContactWrapper = styled.section`
   width: 40%;
-  /* background-color: #fff; */
   background: ${({ theme }) => theme.body};
   margin: 0;
   form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    animation: ${slideDown} 0.8s forwards;
   }
   input,
   textarea {
     background-color: #f5f5f5;
-    /* background: ${({ theme }) => theme.formInput}; */
-    /* color: ${({ theme }) => theme.text}; */
     border: none;
     outline: none;
     padding: 1rem;
     border-radius: 5px;
+    animation: ${slideDown} 1.2s forwards;
     &::placeholder {
-      /* color: ${({ theme }) => theme.text}; */
       color: #232946;
     }
   }
@@ -121,6 +117,7 @@ const ContactWrapper = styled.section`
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    animation: ${slideDown} 1.4s forwards;
     &:hover {
       background-color: #4c43f9;
     }
