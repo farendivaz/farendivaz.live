@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import Code from "../assets/svg/code.svg";
 import coding from "../assets/svg/coding.svg";
+import { slideUp } from "./Projects";
 
 const About = () => {
   return (
     <>
       <AboutHeading>About</AboutHeading>
       <AboutWrapper>
-        <img
+        <AboutImage
           small
           src={Code}
           alt="Sitting beside Laptop"
@@ -25,7 +26,7 @@ const About = () => {
           </p>
         </AboutDescription>
         <div>
-          <img src={coding} alt="Standing infront HTML CSS background" />
+          <AboutImage src={coding} alt="Standing infront HTML CSS background" />
         </div>
       </AboutWrapper>
     </>
@@ -36,6 +37,7 @@ const AboutHeading = styled.h1`
   font-size: 3rem;
   text-align: center;
   margin: 5rem 0 0 0;
+  animation: ${slideUp} 0.8s forwards;
 `;
 const AboutWrapper = styled.section`
   height: 700px;
@@ -58,14 +60,14 @@ const AboutWrapper = styled.section`
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    margin: -3rem auto 5rem auto;
+    margin: -7rem auto 5rem auto;
     .first-image {
       display: none;
     }
     div {
       align-self: center;
       height: 200px;
-      margin: 5rem auto;
+      margin: 3rem auto;
     }
   }
 `;
@@ -76,6 +78,8 @@ const AboutDescription = styled.section`
   justify-content: center;
   align-items: center;
   padding: 3rem;
+  animation: ${slideUp} 1.2s forwards;
+
   @media screen and (max-width: 1250px) {
     width: 50%;
     margin: 0 auto;
@@ -84,5 +88,9 @@ const AboutDescription = styled.section`
     width: 80%;
     margin: 0 auto;
   }
+`;
+
+const AboutImage = styled.img`
+  animation: ${slideUp} 1.2s forwards;
 `;
 export default About;

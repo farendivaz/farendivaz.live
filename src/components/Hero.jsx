@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/svg/programming.svg";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Hero = () => {
   return (
@@ -10,7 +10,7 @@ const Hero = () => {
         <HeroHeading> I am Fariz</HeroHeading>
         <HeroDescription>I Design & Build things for web</HeroDescription>
       </HeroText>
-      <img src={Logo} alt="Programmers Icon" />
+      <HeroImage src={Logo} alt="Programmers Icon" />
     </HeroWrapper>
   );
 };
@@ -63,10 +63,22 @@ const HeroText = styled.section`
   align-items: flex-start;
   margin: 0 1rem;
 `;
+
+export const slideDown = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }`;
+
 const HeroHeading = styled.span`
   font-size: ${(props) => (props.small ? "1rem" : "5rem")};
   font-weight: bold;
   margin: -1rem 0;
+  animation: ${slideDown} 0.8s forwards;
   @media screen and (max-width: 960px) {
     font-size: 4rem;
   }
@@ -75,6 +87,11 @@ const HeroHeading = styled.span`
 const HeroDescription = styled.p`
   font-size: 1.2rem;
   margin: 0;
+  animation: ${slideDown} 1s forwards;
+`;
+
+const HeroImage = styled.img`
+  animation: ${slideDown} 1s forwards;
 `;
 
 export default Hero;

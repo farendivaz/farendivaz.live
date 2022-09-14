@@ -75,7 +75,6 @@ const Wrapper = styled.nav`
   align-items: center;
   gap: 7rem;
   margin: 0 auto 0 auto;
-
   a {
     text-decoration: none;
     color: #000;

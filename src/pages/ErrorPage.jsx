@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import ErrorIcon from "../assets/svg/error_icon.svg";
+import { slideDown } from "../components/Hero";
 
 const ErrorPage = () => {
   return (
@@ -23,6 +24,7 @@ const ErrorWrapper = styled.main`
   justify-content: center;
   align-items: center;
   margin: 5rem auto 5rem auto;
+  animation: ${slideDown} 0.8s forwards;
   img {
     width: 500px;
   }

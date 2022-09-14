@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Mesengger from "../assets/svg/messenger.svg";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
+import { slideDown } from "./Hero";
 
 const Contact = () => {
   const [result, setResult] = useState(false);
@@ -63,14 +64,17 @@ const Wrapper = styled.main`
   margin: 4rem auto;
   img {
     height: 400px;
+    animation: ${slideDown} 0.8s forwards;
   }
   h4 {
     font-weight: 600;
     margin: 0;
+    animation: ${slideDown} 0.8s forwards;
   }
   p {
     font-size: 0.8rem;
     margin: 0 0 1rem 0;
+    animation: ${slideDown} 0.8s forwards;
   }
   @media screen and (max-width: 960px) {
     flex-direction: column;
@@ -91,6 +95,7 @@ const ContactWrapper = styled.section`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    animation: ${slideDown} 0.8s forwards;
   }
   input,
   textarea {

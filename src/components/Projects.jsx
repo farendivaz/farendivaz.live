@@ -1,6 +1,6 @@
 import React from "react";
 import { projects } from "../data/data";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Projects = () => {
   return (
@@ -45,12 +45,24 @@ const ProjectsWrapper = styled.main`
     margin: 0 auto;
   }
 `;
+
+export const slideUp = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }`;
+
 const ProjectItem = styled.section`
   width: 40%;
   height: 516px;
   margin: 1rem auto;
   border-radius: 20px;
   transition: 500ms;
+  animation: ${slideUp} 1.2s forwards;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   img {
     max-width: 100%;
@@ -90,6 +102,7 @@ const ProjectHeading = styled.h3`
   font-size: 3rem;
   text-align: center;
   margin: 5rem 0 3rem 0;
+  animation: ${slideUp} 1s forwards;
 `;
 const Button = styled.button`
   font-size: 1rem;
