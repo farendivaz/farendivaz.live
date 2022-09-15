@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
 import { BsMoonFill, BsSunFill } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
-
 const Navbar = ({ toggleTheme, dark }) => {
   return (
     <Header>
@@ -73,8 +72,8 @@ const Wrapper = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 7rem;
-  margin: 0 auto 0 auto;
+  /* gap: 7rem; */
+  margin: 0 auto;
   a {
     text-decoration: none;
     color: #000;
@@ -91,16 +90,15 @@ const Wrapper = styled.nav`
     margin: 0 auto;
     width: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 `;
 const Nav = styled.ul`
   display: flex;
-  justify-content: center;
+  /* justify-content: space-between; */
   align-items: center;
   list-style: none;
-  /* gap: 1.5rem; */
   gap: ${(props) => (props.icons ? "1rem" : "1.5rem")};
   font-weight: 500;
   text-align: center;
@@ -124,7 +122,7 @@ const Nav = styled.ul`
   }
 `;
 const Brand = styled.section`
-  font-family: "Grape Nuts", cursive;
+  font-family: "Poppins", sans-serif;
   @media screen and (max-width: 960px) {
     align-self: flex-start;
   }
@@ -143,15 +141,10 @@ const LinkIcon = styled.a`
   margin: auto;
 `;
 const Name = styled.h4`
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
   cursor: pointer;
-  margin-left: 1.5rem;
-  &:hover {
-    color: #5f5858;
-  }
   a {
-    /* color: #000; */
     color: ${({ theme }) => theme.text};
   }
 `;
@@ -181,4 +174,5 @@ const StyledFaTwitter = styled(FaTwitter)`
     color: ${({ theme }) => theme.text};
   }
 `;
+
 export default Navbar;

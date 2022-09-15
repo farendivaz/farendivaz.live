@@ -40,7 +40,7 @@ const NavbarBottom = () => {
 
 const NavBottom = styled.nav`
   height: 60px;
-  max-width: 750px;
+  max-width: 960px;
   /* background-color: rgba(255, 255, 255, 0.3); */
   background: ${({ theme }) => theme.glass};
   backdrop-filter: blur(15px);
