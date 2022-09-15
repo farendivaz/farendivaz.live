@@ -78,6 +78,9 @@ const Wrapper = styled.nav`
     text-decoration: none;
     color: #000;
   }
+  /* button {
+    margin-right: 1rem;
+  } */
   @media screen and (max-width: 1510px) {
     gap: 3rem;
     margin: 0 auto;
@@ -88,7 +91,7 @@ const Wrapper = styled.nav`
   }
   @media screen and (max-width: 960px) {
     margin: 0 auto;
-    width: 80%;
+    width: 85%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -141,8 +144,9 @@ const LinkIcon = styled.a`
   margin: auto;
 `;
 const Name = styled.h4`
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
+  /* margin-right: 2rem; */
   cursor: pointer;
   a {
     color: ${({ theme }) => theme.text};

@@ -56,9 +56,9 @@ const Link = styled.a`
 `;
 
 const Name = styled.span`
-  font-family: "Grape Nuts", cursive;
+  font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
-  font-weight: bold;
+  font-weight: 600;
 `;
 
 const Copyright = styled.section`
