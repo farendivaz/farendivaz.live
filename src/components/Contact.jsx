@@ -97,9 +97,8 @@ const ContactWrapper = styled.section`
   }
   input,
   textarea {
-    background-color: #f5f5f5;
+    background-color: #dbdbf0;
     border: none;
-    outline: none;
     padding: 1rem;
     border-radius: 5px;
     animation: ${slideDown} 1.2s forwards;
