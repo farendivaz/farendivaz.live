@@ -63,7 +63,7 @@ const NavBottom = styled.nav`
     color: ${({ theme }) => theme.text};
   }
   a:hover {
-    color: #6c63ff;
+    color: #a96bf4;
   }
   @media screen and (max-width: 960px) {
     display: flex;
@@ -82,7 +82,7 @@ const ListNavBottom = styled.li`
     font-size: 1rem;
   }
   .active {
-    color: #6c63ff;
+    color: #a96bf4;
     font-weight: bold;
   }
 `;

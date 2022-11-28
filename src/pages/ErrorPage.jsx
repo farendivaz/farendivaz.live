@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import ErrorIcon from "../assets/svg/error_icon.svg";
+import ErrorIcon from "../assets/svg/404.svg";
 import { slideDown } from "../components/Hero";
 
 const ErrorPage = () => {
@@ -60,7 +60,7 @@ const ErrorWrapper = styled.main`
 const Button = styled.button`
   font-size: 1rem;
   padding: 0.5em 1em;
-  background-color: #6c63ff;
+  background-color: #a96bf4;
   margin: 0 1rem 0 0;
   font-weight: bold;
   border: none;

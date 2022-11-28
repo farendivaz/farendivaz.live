@@ -111,12 +111,14 @@ const Nav = styled.ul`
     color: ${({ theme }) => theme.text};
   }
   a:hover {
-    color: #6c63ff;
+    /* color: #6c63ff; */
+    color: #a96bf4;
   }
   .active {
-    color: #6c63ff;
+    /* color: #6c63ff; */
+    color: #a96bf4;
     font-weight: bold;
-    border-bottom: 3px solid #6c63ff;
+    border-bottom: 3px solid #a96bf4;
   }
   @media screen and (max-width: 960px) {
     li:not(button) {

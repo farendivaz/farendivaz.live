@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Code from "../assets/svg/code.svg";
-import coding from "../assets/svg/coding.svg";
+import Coding from "../assets/svg/new_coding.svg";
 import { slideUp } from "./Projects";
 
 const About = () => {
@@ -26,7 +26,7 @@ const About = () => {
           </p>
         </AboutDescription>
         <div>
-          <AboutImage src={coding} alt="Standing infront HTML CSS background" />
+          <AboutImage src={Coding} alt="Coding" />
         </div>
       </AboutWrapper>
     </>

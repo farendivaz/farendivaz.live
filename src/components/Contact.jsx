@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import Mesengger from "../assets/svg/messenger.svg";
+import Message from "../assets/svg/game.svg";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
 import { slideDown } from "./Hero";
@@ -39,7 +39,7 @@ const Contact = () => {
 
   return (
     <Wrapper>
-      <img src={Mesengger} alt="Email Icon" />
+      <img src={Message} alt="Email Icon" />
       <ContactWrapper>
         <h4>Contact Me</h4>
         <p>Leave a message</p>
@@ -48,7 +48,7 @@ const Contact = () => {
           <input type="text" name="email" placeholder="Email" required />
           <textarea name="message" rows="8" placeholder="Message" required />
           <button onClick={success}>Send</button>
-          {result ? <Toaster position="top-left" /> : ""}
+          {result ? <Toaster position="top-center" /> : ""}
         </form>
       </ContactWrapper>
     </Wrapper>
@@ -57,13 +57,13 @@ const Contact = () => {
 
 const Wrapper = styled.main`
   width: 80%;
-  max-width: 1000px;
+  max-width: 1100px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 4rem auto;
+  margin: 7rem auto;
   img {
-    height: 400px;
+    height: 350px;
     animation: ${slideDown} 0.8s forwards;
   }
   h4 {
@@ -80,8 +80,9 @@ const Wrapper = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 2rem auto;
     img {
-      height: 300px;
+      height: 250px;
     }
   }
 `;
@@ -97,7 +98,7 @@ const ContactWrapper = styled.section`
   }
   input,
   textarea {
-    background-color: #dbdbf0;
+    background-color: #eee3fb;
     border: none;
     padding: 1rem;
     border-radius: 5px;
@@ -111,14 +112,14 @@ const ContactWrapper = styled.section`
     align-self: flex-end;
     padding: 0.5rem 1rem;
     border: none;
-    background-color: #6c63ff;
+    background-color: #a96bf4;
     color: #fff;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     animation: ${slideDown} 1.4s forwards;
     &:hover {
-      background-color: #4c43f9;
+      background-color: #8a3ee7;
     }
   }
   @media screen and (max-width: 960px) {
