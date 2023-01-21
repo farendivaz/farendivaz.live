@@ -36,7 +36,7 @@ const Navbar = ({ toggleTheme, dark }) => {
           </List>
           <List>
             <LinkIcon
-              href="https://linkedin.com/in/farizdandylazuardi/"
+              href="https://linkedin.com/in/farizdandy/"
               target="_blank"
               className="linkedin"
             >

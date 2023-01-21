@@ -8,10 +8,7 @@ const Footer = () => {
         <Link href="https://github.com/farendivaz" target="_blank">
           Github
         </Link>
-        <Link
-          href="https://linkedin.com/in/farizdandylazuardi/"
-          target="_blank"
-        >
+        <Link href="https://linkedin.com/in/farizdandy/" target="_blank">
           LinkedIn
         </Link>
         <Link href="https://twitter.com/farendivaz" target="_blank">
